@@ -1,0 +1,26 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red64\green11\blue217;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c32308\c18668\c88227;\csgray\c0;}
+\margl1440\margr1440\vieww27000\viewh25180\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 I updated ppsspp and it broke the controls.\
+You can delete the control mapping in 
+\f1\b\fs28 \cf2 \CocoaLigature0 ~/.config/ppsspp/PSP/SYSTEM/controls.ini\
+In ppsspp menu there is an option to reset things to defaults\
+\
+In ppsspp menu when mapping controls, HIT THE PLUS and add the new controls, if you replace the old controls you will not be able to navigate the menu\
+\
+I used jstest /dev/input/js3 which is the xbox pad and got the button numbers which I used to map the xbox controls in \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\b0 \cf3 cd /opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt\
+Find the controller with 030000005e0400008e02000010010000 as the id and edit the mappings so the mappings will work in ppsspp menu\
+\
+Will look something like this, use triggers for the l r butttons, had to map some like start, select (back) or else they don\'92t register in ppsspp menu (others too)\
+\
+030000005e0400008e02000010010000,X360 Controller,a:b5,b:b4,back:b12,dpdown:b1,dpleft:b2,dpright:b3,dpup:b0,guide:b8,leftshoulder:b40,leftstick:b9,lefttrigger:b10,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:b11,rightx:a3,righty:a4,start:b13,x:b7,y:b6,platform:Linux,\
+\
+Finally got it working, what a pain in the ass}
